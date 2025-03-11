@@ -12,8 +12,7 @@ const ChatBar: React.FC = () => {
 
   return (
 
-    <div className=" ">
-      <div className="flex justify-end  backdrop-blur-sm rounded-2xl w-xl mt-4 pl-6 text-white shadow-md border border-gray-200">
+      <div className="flex justify-end  backdrop-blur-sm rounded-2xl w-xl  pl-6 text-white shadow-md border border-gray-200">
         <input
           type="text"
           placeholder="Ask me anything about your script..."
@@ -24,12 +23,11 @@ const ChatBar: React.FC = () => {
 
         <button
           onClick={handleSend}
-          className="ml-2 flex items-center gap-1 rounded-2xl bg-gradient-to-r from-[#168ECE] to-[#2AABEE] px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition"
+          className="ml-2 flex items-center gap-1 rounded-2xl bg-cyan-600 px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition"
         >
           Send
         </button>
       </div>
-    </div>
   );
 };
 

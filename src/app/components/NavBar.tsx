@@ -2,11 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
-import  AiBlockchainToggle  from "./AiBlockchainToggle";
+import AiBlockchainToggle from "./AiBlockchainToggle";
+
+
 const NavBar: React.FC = () => {
-
-
-
 
   return (
     <nav className="bg-[#0D1B2A]/50 h-16 flex items-center justify-between px-6 text-white">

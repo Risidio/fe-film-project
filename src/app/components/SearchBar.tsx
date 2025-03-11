@@ -9,7 +9,7 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-end   bg-white/10 backdrop-blur-sm rounded-2xl w-xl mt-4 pl-6 text-white shadow-md border border-gray-200">
+    <div className="flex justify-end   bg-white/10 backdrop-blur-sm rounded-2xl w-xl pl-6 text-white shadow-md border border-gray-200">
       <input
         type="text"
         value={query}
