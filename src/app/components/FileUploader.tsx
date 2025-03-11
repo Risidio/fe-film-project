@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { Upload } from "lucide-react";
 import { toast } from "sonner";
 
-const FileUploader = () => {
-  const [isDragging, setIsDragging] = useState(false);
+const FileUploader = ({onUpload}:{onUpload:(file: File) => void}) => {
+    const [isDragging, setIsDragging] = useState(false);
+    const [fileList, setFileList] = useState<FileList | null>(null);
   
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -20,34 +21,28 @@ const FileUploader = () => {
     e.preventDefault();
     setIsDragging(false);
     
-    const files = e.dataTransfer.files;
-    if (files.length > 0) {
-      handleFiles(files);
+    const file = e.dataTransfer.files[0];
+    if (file) {
+      onUpload(file);
     }
   };
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
-    if (files && files.length > 0) {
-      handleFiles(files);
+    if (files) {
+        const file = files[0];
+        onUpload(file);
     }
   };
-  
-  const handleFiles = (files: FileList) => {
-    // In a real app, you would process and upload the files here
-    const fileNames = Array.from(files).map(file => file.name).join(', ');
-    toast.success(`Files ready for upload: ${fileNames}`, {
-      description: "Your script will be analyzed using AI and blockchain registration."
-    });
-  };
+
   
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto backdrop-blur-none">
       <motion.div
-        className={`relative h-60 border-2 border-dashed rounded-lg flex flex-col items-center justify-center p-6 transition-all duration-200 ${
+        className={`relative h-60  rounded-lg flex flex-col items-center justify-center p-6 transition-all duration-200 ${
           isDragging 
-            ? "border-teal-bright/80 bg-white/10" 
-            : "border-white/20 bg-white/5"
+            ? "border border-teal-bright/80 bg-white/10" 
+            : "bg-black/20"
         }`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
