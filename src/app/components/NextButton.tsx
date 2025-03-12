@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-const NextButton = ({ children }: { children: ReactNode }) => {
+const NextButton = ({ children }: { children?: ReactNode }) => {
   return (
     <button className="backdrop-blur-md bg-cyan-500 text-blue-dark font-medium shadow-lg 
       border border-white/10 rounded-md px-6 py-2

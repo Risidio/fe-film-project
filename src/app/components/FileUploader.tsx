@@ -2,11 +2,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Upload } from "lucide-react";
-import { toast } from "sonner";
 
 const FileUploader = ({onUpload}:{onUpload:(file: File) => void}) => {
     const [isDragging, setIsDragging] = useState(false);
-    const [fileList, setFileList] = useState<FileList | null>(null);
   
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
