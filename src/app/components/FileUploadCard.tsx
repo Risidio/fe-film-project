@@ -13,7 +13,8 @@ type FileData = {
 function FileUploadCard() {
     const router = useRouter();
     const [file, setFile] = useState<File | null>(null);
-    const [fileData, setFileData] = useState<FileData | null>(null);
+    const [uploading, setUploading] = useState(false);
+    const [fileUrl, setFileUrl] = useState<string | null>(null);
 
     const handleCancelUpload = () => {
         router.push("/ai");
@@ -22,7 +23,32 @@ function FileUploadCard() {
         setFile(file);
     }
     const removeFile = () => {
+
         setFile(null);
+    }
+
+    const uploadFileToPinata = async () => {
+        try {
+            if (!file) {
+                alert("No file selected");
+                return;
+            }
+            setUploading(true);
+            const formData = new FormData();
+            formData.set("file", file);
+            const response = await fetch("/api/ipsFileUpload", {
+                method: "POST",
+                body: formData,
+            });
+            const signedUrl = await response.json();
+            alert("File uploaded successfully");
+            setFileUrl(signedUrl);
+            setUploading(false);
+        } catch (error) {
+            console.error("Error uploading file", error);
+            setUploading(false);
+            alert("Error uploading file");
+        }
     }
 
 
@@ -42,14 +68,16 @@ function FileUploadCard() {
           <FileUploader onUpload={handleUpload} />
           {file && (
             <div className='mt-4 mx-5'>
-              <UploadedFile fileName={file.name} onRemove={removeFile} />
-            </div>
+                  <UploadedFile fileName={file.name} onRemove={removeFile} />
+              </div>
+              
           )}
+          <p> { fileUrl}</p>
           <div className="flex justify-between mt-8">
             <CancelButton onClick={handleCancelUpload}>
                 Cancel Upload
             </CancelButton>
-              <NextButton>
+              <NextButton onClick={uploadFileToPinata} >
                   Submit
               </NextButton>
           </div>
