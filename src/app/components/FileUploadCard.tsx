@@ -14,7 +14,7 @@ function FileUploadCard() {
     const router = useRouter();
     const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false);
-    const [fileUrl, setFileUrl] = useState<string | null>(null);
+    // const [fileUrl, setFileUrl] = useState<string | null>(null);
     const [fileData, setFileData] = useState<FileData>({
         fileName: "",
         tag: "",
@@ -64,7 +64,7 @@ function FileUploadCard() {
                 body: formData,
             });
             const signedUrl = await response.json();
-            setFileUrl(signedUrl);
+            // setFileUrl(signedUrl);
             setUploading(false);
             alert("File uploaded successfully");
             return signedUrl;
