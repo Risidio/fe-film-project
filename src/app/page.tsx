@@ -5,10 +5,10 @@ import FeatureCard from "@/components/FeatureCard";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-200 text-gray-900">
+    <div className="min-h-screen flex flex-col text-gray-900">
 
       {/* Hero Section */}
-      <section className="text-center py-16 flex flex-col items-center justify-center grow-7">
+      <section className="text-center py-16 flex flex-col items-center justify-center grow-6">
         <div className="inline-flex flex-col items-center">
           <h1 className="text-5xl font-light mb-3">
             Welcome to Film<span className="font-bold">Fusion</span>
