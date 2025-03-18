@@ -7,8 +7,6 @@ import {
     Sidebar,
     SidebarContent,
     SidebarGroup,
-    SidebarGroupContent,
-    SidebarGroupLabel,
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
@@ -19,7 +17,6 @@ import {
 
 export function AppSidebar() {
     const pathname= usePathname();
-    console.log(pathname);
   return (
       <Sidebar className=" pt-2 pl-2">
           <SidebarHeader>
@@ -35,7 +32,7 @@ export function AppSidebar() {
             <SidebarMenu className="gap-2">
                 {featureList.map((item) => (
                 <SidebarMenuItem  key={item.title}>
-                  <SidebarMenuButton className={pathname===item.link? 'bg-gray-300' : ''} asChild>
+                  <SidebarMenuButton className={pathname.includes(item.link)? 'bg-gray-300' : ''} asChild>
                     <a href={item.link}>
                       <item.icon  />
                       <span className="text-xl">{item.title}</span>
