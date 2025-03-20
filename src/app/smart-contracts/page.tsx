@@ -4,6 +4,8 @@ import { useState } from "react";
 import { SmartContractCard } from "@/components/ContractCard";
 import ContractTypeToggle from "@/components/ContractTypeToggle";
 
+import { v4 as uuidv4 } from "uuid";
+
 export default function Page() {
   const [selectedType, setSelectedType] = useState("All");
   const DUMMY_CONTRACTS = [
@@ -75,7 +77,7 @@ export default function Page() {
           const { title, description, type, functions } = card;
           return (
             <SmartContractCard
-              key={i}
+              key={uuidv4()}
               title={title}
               description={description}
               type={type}

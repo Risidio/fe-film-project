@@ -1,4 +1,5 @@
 import * as React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -44,7 +45,7 @@ export function SmartContractCard({
           <p className="text-sm font-semibold mb-2">Key functions:</p>
           <div className=" w-fit-content flex flex-wrap gap-2">
             {functions.map((func) => (
-              <Tag text={func} />
+              <Tag key={uuidv4()} text={func} />
             ))}
           </div>
         </div>
