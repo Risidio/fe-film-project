@@ -30,15 +30,13 @@ export function SmartContractCard({
   functions,
 }: ContractProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300">
+    <Card className="hover:shadow-lg transition-shadow duration-300 h-fit">
       <CardHeader>
         <div className="mb-5">
           <Tag text={type} colour="text-blue-500" />
         </div>
         <CardTitle className="text-xl">{title}</CardTitle>
-        <CardDescription className="h-10 lg:h-10">
-          {description}
-        </CardDescription>
+        <CardDescription className="h-10">{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="border-t-2 py-6 h-32 justify-between items-center">
