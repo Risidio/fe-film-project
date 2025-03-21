@@ -1,35 +1,7 @@
 import { ReactNode } from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { FileText, FileSpreadsheet, Presentation } from "lucide-react";
 import ToggleButton from '@/components/ToggleButton';
 
-const files = [
-  {
-    name: "Contract Agreement.pdf",
-    size: "2.5 MB",
-    date: "Oct 15, 2023",
-    icon: <FileText className="w-6 h-6 text-red-500" />,
-  },
-  {
-    name: "Financial Report.xlsx",
-    size: "1.8 MB",
-    date: "Nov 20, 2023",
-    icon: <FileSpreadsheet className="w-6 h-6 text-green-500" />,
-  },
-  {
-    name: "Presentation.pptx",
-    size: "5.2 MB",
-    date: "Sep 05, 2023",
-    icon: <Presentation className="w-6 h-6 text-blue-500" />,
-  },
-  {
-    name: "Requirements.docx",
-    size: "1.1 MB",
-    date: "Dec 01, 2023",
-    icon: <FileText className="w-6 h-6 text-gray-500" />,
-  },
-];
+
 
 const toggleOptions = [
     { name: "Browse Assets", link: "/asset-management" },
