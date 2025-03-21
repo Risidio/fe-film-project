@@ -36,12 +36,12 @@ export function SmartContractCard({
           <Tag text={type} colour="text-blue-500" />
         </div>
         <CardTitle className="text-xl">{title}</CardTitle>
-        <CardDescription className="h-32 lg:h-10">
+        <CardDescription className="h-10 lg:h-10">
           {description}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="border-t-2 py-2">
+        <div className="border-t-2 py-6 h-32 justify-between items-center">
           <p className="text-sm font-semibold mb-2">Key functions:</p>
           <div className=" w-fit-content flex flex-wrap gap-2">
             {functions.map((func) => (
@@ -50,7 +50,7 @@ export function SmartContractCard({
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter className="flex justify-between items-center mt-10">
         <Button variant="outline">View</Button>
         <Button>
           <IoRocketOutline />
