@@ -6,7 +6,7 @@ interface LayoutProps {
 
 const layout = ({ children }: LayoutProps) => {
   return (
-    <div className="max-w-6xl mx-auto py-10 px-4">
+    <div className="max-w-6xl mx-auto py-10 px-4 h-full">
       <h2 className="text-2xl xl:text-4xl font-bold pb-2">
         Smart Contract Collection
       </h2>

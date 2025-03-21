@@ -3,55 +3,12 @@
 import { useState } from "react";
 import { SmartContractCard } from "@/components/ContractCard";
 import ContractTypeToggle from "@/components/ContractTypeToggle";
+import { DUMMY_CONTRACTS } from "@/lib/SmartContractList";
 
 import { v4 as uuidv4 } from "uuid";
 
 export default function Page() {
   const [selectedType, setSelectedType] = useState("All");
-  const DUMMY_CONTRACTS = [
-    {
-      title: "FilmRights",
-      description: "Manages ownership of IP, assigns revenue shares",
-      type: "ERC-721",
-      functions: [
-        "Assigns ownership",
-        "Records rights",
-        "Facilitates transfers",
-      ],
-    },
-    {
-      title: "Licensing",
-      description: "Automates film licensing and royalty payments",
-      type: "ERC-721",
-      functions: ["Issues licenses", "Enforces royalties on distribution"],
-    },
-    {
-      title: "RevenueSplit",
-      description:
-        "Automates revenue sharing among investors, creators, and stakeholders",
-      type: "ERC-20",
-      functions: [
-        "Distribution of revenue",
-        "Handles multiple revenue streams",
-      ],
-    },
-    {
-      title: "Investment",
-      description: "Enables tokenised film investment and revenue sharing",
-      type: "ERC-1155",
-      functions: [
-        "Tracks contributions",
-        "Issues film-backed tokens",
-        "Automates investor payouts",
-      ],
-    },
-    {
-      title: "StreamingPayouts",
-      description: "Enables tokenised film investment and revenue sharing",
-      type: "ERC-20",
-      functions: ["Reads external streaming data", "Executes micropayments"],
-    },
-  ];
 
   const toggleOptions = [
     { name: "All" },
@@ -72,9 +29,8 @@ export default function Page() {
           onSelect={setSelectedType}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
-        {filteredContracts.map((card, i) => {
-          const { title, description, type, functions } = card;
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6 h-2/3">
+        {filteredContracts.map(({ title, description, type, functions }) => {
           return (
             <SmartContractCard
               key={uuidv4()}
