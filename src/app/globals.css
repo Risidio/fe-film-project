@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 
@@ -46,7 +46,7 @@
 }
 
 body {
-  background: white
+  background: white;
 }
 
 :root {
