@@ -30,17 +30,32 @@ export default function Page() {
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6 overflow-y-scroll h-2/3">
-        {filteredContracts.map(({ title, description, type, functions }) => {
-          return (
-            <SmartContractCard
-              key={uuidv4()}
-              title={title}
-              description={description}
-              type={type}
-              functions={functions}
-            />
-          );
-        })}
+        {filteredContracts.map(
+          ({
+            title,
+            description,
+            type,
+            functions,
+            keyFeatures,
+            useCases,
+            standards,
+            chainSupport,
+          }) => {
+            return (
+              <SmartContractCard
+                key={uuidv4()}
+                title={title}
+                description={description}
+                type={type}
+                functions={functions}
+                keyFeatures={keyFeatures}
+                useCases={useCases}
+                standards={standards}
+                chainSupport={chainSupport}
+              />
+            );
+          }
+        )}
       </div>
     </>
   );
