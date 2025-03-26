@@ -1,7 +1,7 @@
 export default function Page() {
-    return (
-        <div className="mt-20 font-bold flex flex-col items-center justify-center">
-           Ai analysis
-        </div>
-    )
+  return (
+    <div className="mt-20 flex flex-col items-center justify-center font-bold">
+      Ai analysis
+    </div>
+  );
 }
