@@ -15,12 +15,17 @@ import { Label } from "@/components/ui/label";
 import Tag from "./ui/Tag";
 
 import { IoRocketOutline } from "react-icons/io5";
+import ContractModal from "./ContractModal";
 
 interface ContractProps {
   title: string;
   type: string;
   description: string;
   functions: string[];
+  keyFeatures?: string[];
+  useCases?: string[];
+  standards?: string[];
+  chainSupport?: string[];
 }
 
 export function SmartContractCard({
@@ -28,6 +33,10 @@ export function SmartContractCard({
   type,
   description,
   functions,
+  keyFeatures,
+  useCases,
+  standards,
+  chainSupport,
 }: ContractProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow duration-300 h-fit">
@@ -49,7 +58,15 @@ export function SmartContractCard({
         </div>
       </CardContent>
       <CardFooter className="flex justify-between items-center mt-10">
-        <Button variant="outline">View</Button>
+        <ContractModal
+          title={title}
+          type={type}
+          description={description}
+          keyFeatures={keyFeatures}
+          useCases={useCases}
+          standards={standards}
+          chainSupport={chainSupport}
+        />
         <Button>
           <IoRocketOutline />
           Deploy
