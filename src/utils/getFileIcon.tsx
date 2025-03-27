@@ -5,7 +5,7 @@ export default function getFileIcon(filename: string) {
   switch (extension) {
     case 'pdf':
       return <FileText className="h-6 w-6 text-red-500" />;
-    case 'xlsx':
+    case 'xlsx' : case 'xls' : case 'csv':
       return <FileSpreadsheet className="h-6 w-6 text-green-500" />;
     case 'pptx':
       return <Presentation className="h-6 w-6 text-blue-500" />;

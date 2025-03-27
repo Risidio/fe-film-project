@@ -1,28 +1,32 @@
 import AssetCard from "@/components/AssetCard";
 
-export default function Page() {
-  const files = [
-    {
-      name: "Contract Agreement.pdf",
-      size: "2.5 MB",
-      date: "Oct 15, 2023",
-    },
-    {
-      name: "Financial Report.xlsx",
-      size: "1.8 MB",
-      date: "Nov 20, 2023",
-    },
-    {
-      name: "Presentation.pptx",
-      size: "5.2 MB",
-      date: "Sep 05, 2023",
-    },
-    {
-      name: "Requirements.docx",
-      size: "1.1 MB",
-      date: "Dec 01, 2023",
-    },
-  ];
+
+type file = {
+  name: string;
+  size: number;
+  date: string;
+};
+
+export default async function Page() {
+
+  const assetFiles = await fetch(process.env.URL +"/api/asset-management/file-assets", {
+    method: "GET"
+  }).then((response) => response.json());
+  
+  if (assetFiles.error) {
+    console.error(assetFiles.error);
+    return <div>Error fetching asset files</div>;
+  }
+
+  const files: file[] = assetFiles.fileAssets.map((file: file) => ({
+    name: file.name,
+    size: (file.size / (1024 * 1024)).toFixed(2),
+    date: new Date(file.date).toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    }),
+  }));
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 p-2">
