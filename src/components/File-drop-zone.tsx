@@ -87,7 +87,7 @@ export function FileDropZone({ onFileSelect, maxSizeMB = 20, accept, className =
         <p className="text-sm text-muted-foreground">Or click to browse (max {maxSizeMB}MB)</p>
         {error && <p className="text-sm text-destructive mt-2">{error}</p>}
       </div>
-      <input type="file" ref={fileInputRef} onChange={handleFileInputChange} accept={accept} className="hidden" />
+      <input type="file" ref={fileInputRef} name="file" onChange={handleFileInputChange} accept={accept} className="hidden" />
     </div>
   )
 }

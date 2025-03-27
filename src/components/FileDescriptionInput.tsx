@@ -9,7 +9,7 @@ export default function FileDescriptionInput() {
   return (
     <div className="*:not-first:mt-2">
       <Label htmlFor={id}>File Description: </Label>
-      <Textarea id={id} rows={4} placeholder="Write your description" required/>
+      <Textarea id={id} rows={4} name="description" placeholder="Write your description" required/>
     </div>
   );
 }

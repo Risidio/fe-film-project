@@ -1,6 +1,8 @@
 export type FileData = {
-    fileName: string;
-    tag: string;
+    name: string;
+    size: number;
+    type: string;
     description: string;
-
+    url: string;
+    date: Date;
 }
