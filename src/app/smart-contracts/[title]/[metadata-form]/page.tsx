@@ -11,7 +11,7 @@ export default function MetadataForm({
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold">
-        {decodeURIComponent(params.title)} Smart 
+        {decodeURIComponent(params.title)} Smart
       </h1>
       <AssetSelection title={params.title} />
     </div>
