@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -6,11 +6,11 @@ interface LayoutProps {
 
 const layout = ({ children }: LayoutProps) => {
   return (
-    <div className="max-w-6xl mx-auto py-10 px-4 h-full">
-      <h2 className="text-2xl xl:text-4xl font-bold pb-2">
+    <div className="mx-auto h-full max-w-6xl px-4 py-10">
+      <h2 className="pb-2 text-2xl font-bold xl:text-4xl">
         Smart Contract Collection
       </h2>
-      <p className="text-gray-500 text-lg xl:text-2xl">
+      <p className="text-lg text-gray-500 xl:text-2xl">
         Select a smart contract to view or deploy
       </p>
 
