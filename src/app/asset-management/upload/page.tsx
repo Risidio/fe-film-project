@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { useState, useActionState } from "react"
 import { FileDropZone } from "@/components/File-drop-zone"
@@ -41,5 +41,5 @@ export default function Page() {
         {state?.error && <p>{state.error}</p>}
       </div>
     </div>
-  )
+  );
 }
