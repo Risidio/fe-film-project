@@ -6,12 +6,6 @@ declare global {
   var mongoose: any; 
 }
 
-
-// interface MongooseConn {
-//     conn: Mongoose | null;
-//     promise: Promise<Mongoose> | null;
-// }
-
 let cached = global.mongoose;
 
 if (!cached) {

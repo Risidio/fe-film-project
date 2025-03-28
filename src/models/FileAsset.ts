@@ -1,7 +1,7 @@
 import { Schema, model, models, Document, Types } from 'mongoose';
 import { FileData } from "@/types/types";
 
-interface IFileAsset extends FileData, Document {
+export interface IFileAsset extends FileData, Document {
     userAuthId: string;
     updatedAt: Date;
 }
