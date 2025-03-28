@@ -1,19 +1,22 @@
+import { use } from 'react';
+
 import AssetSelection from '@/components/AssetSelection';
 
 export default function SmartContractDetailPage({
   params,
 }: {
-  params: { title?: string };
+  params: Promise<{ title?: string }>;
 }) {
-  if (!params.title) {
+  const resolvedParams = use(params);
+  if (!resolvedParams?.title) {
     return <p>Loading...</p>;
   }
   return (
-    <div className="p-6">
+    <div className="h-full">
       <h1 className="text-2xl font-bold">
-        {decodeURIComponent(params.title)} Smart Contract
+        {decodeURIComponent(resolvedParams.title)} Smart Contract
       </h1>
-      <AssetSelection title={params.title} />
+      <AssetSelection title={resolvedParams.title} />
     </div>
   );
 }

@@ -23,6 +23,12 @@ export default function Page() {
       : DUMMY_CONTRACTS.filter((contract) => contract.type === selectedType);
   return (
     <>
+      <h2 className="pb-2 text-2xl font-bold xl:text-4xl">
+        Smart Contract Collection
+      </h2>
+      <p className="text-lg text-gray-500 xl:text-2xl">
+        Select a smart contract to view or deploy
+      </p>
       <div className="mt-4">
         <ContractTypeToggle
           options={toggleOptions}
