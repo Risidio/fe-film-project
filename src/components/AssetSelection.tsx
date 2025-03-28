@@ -62,6 +62,10 @@ const AssetSelection = ({ title }: { title: string }) => {
     }
   };
 
+  const handleCancel = () => {
+    router.push('/smart-contracts');
+  };
+
   return (
     <div>
       <h2>Step 1: Select or Upload a document</h2>
@@ -83,9 +87,14 @@ const AssetSelection = ({ title }: { title: string }) => {
           />
         </div>
       </div>
-      <Button onClick={handleNext} className="mt-6">
-        Next
-      </Button>
+      <div className="flex justify-between">
+        <Button variant="outline" onClick={handleCancel} className="mt-6">
+          Cancel
+        </Button>
+        <Button onClick={handleNext} className="mt-6">
+          Next
+        </Button>
+      </div>
     </div>
   );
 };
