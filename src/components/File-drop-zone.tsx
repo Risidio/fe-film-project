@@ -88,13 +88,7 @@ export function FileDropZone({
         </p>
         {error && <p className="text-destructive mt-2 text-sm">{error}</p>}
       </div>
-      <input
-        type="file"
-        ref={fileInputRef}
-        onChange={handleFileInputChange}
-        accept={accept}
-        className="hidden"
-      />
+      <input type="file" ref={fileInputRef} name="file" onChange={handleFileInputChange} accept={accept} className="hidden" />
     </div>
   );
 }

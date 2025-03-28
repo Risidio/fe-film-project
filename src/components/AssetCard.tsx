@@ -3,7 +3,7 @@ import getFileIcon from '@/utils/getFileIcon';
 
 interface AssetCardProps {
   fileName: string;
-  fileSize: string;
+  fileSize: number;
   date: string;
 }
 
@@ -19,7 +19,7 @@ export default function AssetCard({
       <CardContent className="p-0">
         <p className="font-medium">{fileName}</p>
         <p className="text-sm text-gray-500">
-          {fileSize} • {date}
+          {fileSize + ' MB'} • {date}
         </p>
       </CardContent>
     </Card>
