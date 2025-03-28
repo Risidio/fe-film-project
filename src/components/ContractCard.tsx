@@ -1,7 +1,7 @@
-import * as React from "react";
-import { v4 as uuidv4 } from "uuid";
+import * as React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -9,13 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import Tag from "./ui/Tag";
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import Tag from './ui/Tag';
 
-import { IoRocketOutline } from "react-icons/io5";
-import ContractModal from "./ContractModal";
+import { IoRocketOutline } from 'react-icons/io5';
+import ContractModal from './ContractModal';
+
+import Link from 'next/link';
 
 interface ContractProps {
   title: string;
@@ -39,7 +41,7 @@ export function SmartContractCard({
   chainSupport,
 }: ContractProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow duration-300 h-fit">
+    <Card className="h-fit transition-shadow duration-300 hover:shadow-lg">
       <CardHeader>
         <div className="mb-5">
           <Tag text={type} colour="text-blue-500" />
@@ -48,16 +50,16 @@ export function SmartContractCard({
         <CardDescription className="h-10">{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="border-t-2 py-6 h-32 justify-between items-center">
-          <p className="text-sm font-semibold mb-2">Key functions:</p>
-          <div className=" w-fit-content flex flex-wrap gap-2">
+        <div className="h-32 items-center justify-between border-t-2 py-6">
+          <p className="mb-2 text-sm font-semibold">Key functions:</p>
+          <div className="w-fit-content flex flex-wrap gap-2">
             {functions.map((func) => (
               <Tag key={uuidv4()} text={func} />
             ))}
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between items-center mt-10">
+      <CardFooter className="mt-10 flex items-center justify-between">
         <ContractModal
           title={title}
           type={type}
@@ -67,10 +69,12 @@ export function SmartContractCard({
           standards={standards}
           chainSupport={chainSupport}
         />
-        <Button>
-          <IoRocketOutline />
-          Deploy
-        </Button>
+        <Link href={`/smart-contracts/${encodeURIComponent(title)}`} passHref>
+          <Button>
+            <IoRocketOutline />
+            Deploy
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );

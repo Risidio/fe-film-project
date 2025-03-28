@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface TextProps {
   text: string;
@@ -8,7 +8,7 @@ interface TextProps {
 const Tag = ({ text, colour }: TextProps) => {
   return (
     <small
-      className={`w-fit px-3 py-1 font-bold rounded-full ${colour} bg-gray-100`}
+      className={`w-fit rounded-full px-3 py-1 font-bold ${colour} bg-gray-100`}
     >
       {text}
     </small>

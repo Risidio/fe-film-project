@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 interface ToggleButtonProps {
   options: { name: string }[];
@@ -11,7 +11,7 @@ const ContractTypeToggle: React.FC<ToggleButtonProps> = ({
   options,
   onSelect,
 }) => {
-  const [selected, setSelected] = useState<string | null>("All");
+  const [selected, setSelected] = useState<string | null>('All');
 
   const handleSelect = (name: string) => {
     setSelected(name);
@@ -23,10 +23,10 @@ const ContractTypeToggle: React.FC<ToggleButtonProps> = ({
         <button
           key={option.name}
           onClick={() => handleSelect(option.name)}
-          className={`px-4 py-1.5 rounded transition-colors ${
+          className={`rounded px-4 py-1.5 transition-colors ${
             selected === option.name
-              ? "bg-white rounded-md text-gray-800 shadow-sm"
-              : "text-gray-600 hover:text-gray-800"
+              ? 'rounded-md bg-white text-gray-800 shadow-sm'
+              : 'text-gray-600 hover:text-gray-800'
           }`}
         >
           {option.name}
