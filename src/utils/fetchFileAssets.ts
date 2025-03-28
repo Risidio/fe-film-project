@@ -4,7 +4,7 @@ import { IFileAsset } from "@/models/FileAsset";
 export default async function fetchFileAssets() {
     try {
         const res = await fetch(
-            process.env.URL + "/api/asset-management/file-asset",
+            process.env.URL + "/api/asset-management/file-assets",
             {
                 method: "GET",
             }
