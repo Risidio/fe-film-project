@@ -42,7 +42,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-10">
+    <div className="mx-auto max-w-6xl px-4">
       <h2 className="pb-2 text-2xl font-bold xl:text-4xl">Assets</h2>
       <p className="text-lg text-gray-500 xl:text-2xl">
         Upload and manage your files in one place
