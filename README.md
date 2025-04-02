@@ -1,14 +1,14 @@
 # Private Software License Agreement
 
-This **Private Software License Agreement** ("Agreement") is made between **Joshua Emmanuel Capito**, **Tanvir H. Ahamed** ("Licensor") and the Licensee and governs the use of the Software provided by the Licensor.
+This **Private Software License Agreement** ("Agreement") is made between **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** ("Licensor") and the Licensee and governs the use of the Software provided by the Licensor.
 
 ## Grant of License
 
-The Licensor grants only **Joshua Emmanuel Capito**, **Tanvir H. Ahamed** the exclusive right to use the Software. No other party is permitted to use, access, copy, or distribute the Software in any manner.
+The Licensor grants only **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** the exclusive right to use the Software. No other party is permitted to use, access, copy, or distribute the Software in any manner.
 
 ## Restrictions
 
-The Licensee (anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**) shall **NOT**:
+The Licensee (anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil**) shall **NOT**:
 
 - Use, access, copy, modify, or distribute the Software.
 - Use the Software or its functionality to generate revenue, directly or indirectly.
@@ -19,11 +19,11 @@ The Licensee (anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**
 
 ## Ownership
 
-The Licensor, **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, retains all rights, title, and interest in and to the Software, including all intellectual property rights.
+The Licensor, **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil**, retains all rights, title, and interest in and to the Software, including all intellectual property rights.
 
 ## Termination
 
-This Agreement is effective indefinitely. Any unauthorized use of the Software by anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed** constitutes an immediate and automatic termination of any rights to access or use the Software. Upon termination, any unauthorized party must cease all use of the Software and destroy all copies.
+This Agreement is effective indefinitely. Any unauthorized use of the Software by anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** constitutes an immediate and automatic termination of any rights to access or use the Software. Upon termination, any unauthorized party must cease all use of the Software and destroy all copies.
 
 ## Disclaimer of Warranties
 
