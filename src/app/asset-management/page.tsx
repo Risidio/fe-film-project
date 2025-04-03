@@ -1,34 +1,22 @@
-import AssetCard from '@/components/AssetCard';
+import AssetCard from "@/components/AssetCard";
+import fetchFileAssets from "@/utils/fetchFileAssets";
 
-export default function Page() {
-  const files = [
-    {
-      name: 'Contract Agreement.pdf',
-      size: '2.5 MB',
-      date: 'Oct 15, 2023',
-    },
-    {
-      name: 'Financial Report.xlsx',
-      size: '1.8 MB',
-      date: 'Nov 20, 2023',
-    },
-    {
-      name: 'Presentation.pptx',
-      size: '5.2 MB',
-      date: 'Sep 05, 2023',
-    },
-    {
-      name: 'Requirements.docx',
-      size: '1.1 MB',
-      date: 'Dec 01, 2023',
-    },
-  ];
+type File = {
+  id : string;
+  name: string;
+  size: number;
+  date: string;
+};
+
+export default async function Page() {
+
+  const files = await fetchFileAssets();
 
   return (
-    <div className="mt-6 grid grid-cols-1 gap-4 p-2 md:grid-cols-3">
-      {files.map((file, index) => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 p-2">
+      {files.map((file : File) => (
         <AssetCard
-          key={index}
+          key={file.id}
           fileName={file.name}
           fileSize={file.size}
           date={file.date}
