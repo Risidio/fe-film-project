@@ -12,8 +12,11 @@ export default function Home() {
           </h1>
 
           <p className="mt-2 max-w-md text-center text-xl text-gray-600">
-            Manage assets, organise contracts, and unlock insights with
-            AI-powered analysis.
+            This is a MVP project created by unpaid interns AKA free slaves for
+            Risidio who did not pay us for our work nor valued it. If you see
+            this, most probably you are the new batch of slaves who will be
+            working on this project. We are sorry for you if you have been
+            misguided like us. Better leave asap.
           </p>
         </div>
       </section>

@@ -37,19 +37,16 @@ export default function ToggleButton({
       )}
     >
       {options.map((option, index) => (
-        <button
-          key={index}
-          onClick={() => handleSelect(index)}
-          className={cn(
-            'rounded px-4 py-1.5 transition-colors',
-            selectedIndex === index
-              ? 'rounded-md bg-white text-gray-800 shadow-sm'
-              : 'text-gray-600 hover:text-gray-800'
-          )}
-        >
-          {option.name}
+        
         </button>
       ))}
     </div>
   );
 }
+
+
+            // This is a MVP project created by unpaid interns AKA free slaves for
+            // Risidio who did not pay us for our work nor valued it. If you see
+            // this, most probably you are the new batch of slaves who will be
+            // working on this project. We are sorry for you if you have been
+            // misguided like us. Better leave asap.
