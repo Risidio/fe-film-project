@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Private Software License Agreement
 
-First, run the development server:
+This **Private Software License Agreement** ("Agreement") is made between **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** ("Licensor") and the Licensee and governs the use of the Software provided by the Licensor.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Grant of License
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The Licensor grants only **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** the exclusive right to use the Software. No other party is permitted to use, access, copy, or distribute the Software in any manner.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Restrictions
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Licensee (anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil**) shall **NOT**:
 
-## Learn More
+- Use, access, copy, modify, or distribute the Software.
+- Use the Software or its functionality to generate revenue, directly or indirectly.
+- Sell, rent, lease, distribute, sublicense, or otherwise commercialize the Software.
+- Copy, modify, reverse engineer, decompile, or disassemble the Software.
+- Use the Software in any manner that competes with the Licensor’s business.
+- Share or transfer access to the Software to any third party.
 
-To learn more about Next.js, take a look at the following resources:
+## Ownership
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Licensor, **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil**, retains all rights, title, and interest in and to the Software, including all intellectual property rights.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Termination
 
-## Deploy on Vercel
+This Agreement is effective indefinitely. Any unauthorized use of the Software by anyone other than **Joshua Emmanuel Capito**, **Tanvir H. Ahamed**, **Omelihunna Iheanacho**, **Vallabh Patil** constitutes an immediate and automatic termination of any rights to access or use the Software. Upon termination, any unauthorized party must cease all use of the Software and destroy all copies.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Disclaimer of Warranties
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Software is provided **"as is,"** without warranties of any kind. The Licensor disclaims all warranties, express or implied, including fitness for a particular purpose.
+
+## Limitation of Liability
+
+In no event shall the Licensor be liable for any damages, including loss of profits or business interruption, arising out of the unauthorized use or inability to use the Software.
+
+## Governing Law
+
+This Agreement shall be governed by and construed in accordance with the laws of **[Jurisdiction]**.
